@@ -12,7 +12,6 @@ Extras is small Laravel package that contains some basic components (functions) 
 - Glide for Dynamic images 
 - Blades (login, register, alerts, contact...)
 
-
 __Coming Soon__
 
 - Toastr alerts
