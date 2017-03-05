@@ -1,25 +1,24 @@
-# Laravel Extras
+# Laravel Extras (Beta)
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Extras is small Laravel package that contains some basic components that you require for almost every site but are not included in the base Laravel install.
+Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not neccessarialy included in the base Laravel install.
 
-- Social Login / Authentication
-- Messaging
+- Social Login 
+- Messaging (mail)
 - Maps (google)
 - Glide for Dynamic images 
-- Blades (login, register, contact...)
+- Blades (login, register, alerts, contact...)
+
 
 __Coming Soon__
+
+- Toastr alerts
 - Notifications
 - Push notifications
 - Backups
-
 
 
 ## Install
@@ -27,13 +26,62 @@ __Coming Soon__
 Via Composer
 
 ``` bash
+
 $ composer require shawnsandy/extras
+
 ```
+
+Open `config\app.php` and add the following
+
+* __Providers array__
+
+``` php
+
+'providers' => [
+   
+    ShawnSandy\Extras\ExtrasServicesProvider::class,
+    Thujohn\Twitter\TwitterServiceProvider::class,        
+    Collective\Html\HtmlServiceProvider::class,
+
+    // ###
+]
+
+```
+
+* __Aliases array__
+
+```
+    'aliases' => [
+
+    'Form' => Collective\Html\FormFacade::class,
+    'Html' => Collective\Html\HtmlFacade::class,
+    'Extras' => \ShawnSandy\Extras\ExtrasFacade::class,
+    'Gmap' => \ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
+    "Twitter" => \Thujohn\Twitter\Facades\Twitter::class,  
+
+   // ###  
+    ]
+
+```
+
+ __Routes__
+
+```
+
+Route::group(['prefix' => "extras"], function () {
+    Extras::routes();
+});
+
+`````
+
+
 
 ## Usage
 
 ``` php
-///
+
+// coming soon
+
 ```
 
 ## Change log
@@ -43,7 +91,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Testing
 
 ``` bash
+
 $ composer test
+
 ```
 
 ## Contributing
