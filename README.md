@@ -12,7 +12,6 @@ Extras is small Laravel package that contains some basic components (functions) 
 - Glide for Dynamic images 
 - Blades (login, register, alerts, contact...)
 
-
 __Coming Soon__
 
 - Toastr alerts
@@ -50,7 +49,7 @@ Open `config\app.php` and add the following
 
 * __Aliases array__
 
-```
+``` php
     'aliases' => [
 
     'Form' => Collective\Html\FormFacade::class,
@@ -66,7 +65,7 @@ Open `config\app.php` and add the following
 
  __Routes__
 
-```
+``` php
 
 Route::group(['prefix' => "extras"], function () {
     Extras::routes();
