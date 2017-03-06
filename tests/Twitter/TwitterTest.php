@@ -8,12 +8,8 @@
      * Date: 3/5/2017
      * Time: 12:17 AM
      */
-    class TwitterTest extends Orchestra\Testbench\TestCase
+    class TwitterTest extends Orchestra\Testbench\BrowserKit\TestCase
     {
-
-
-
-
 
         /**
          * Setup the test environment.
