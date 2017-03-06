@@ -71,6 +71,9 @@
         public function testRoute()
         {
 
+           $response = $this->action("GET", '\ShawnSandy\Extras\Apps\Socialize\SocialLoginController@index');
+
+            print $response->status();
         }
 
 
