@@ -1,5 +1,6 @@
 <?php
     use ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterAuth;
+    use Collective\Html;
 
 
     /**
