@@ -8,7 +8,7 @@
 
 
    {{ Html::gmap("1600 Pennsylvania Ave NW, Washington, DC 20500",
-   ["height" => '680px'], ['zoom' => 17, "scroll" => 'false']) }}
+   ["height" => '680px'], ['zoom' => 16, "scroll" => 'false']) }}
 
 
 @endsection
