@@ -3,8 +3,8 @@
 @endphp
 
 <div class="container">
-    <div class="row">
-        <div id="g-map" style="height: {{ $map_height or '560px' }}; width: 100%" data-lat="{{ $map["lat"] }}" data-lng="{{ $map["lng"] }}"></div>
+    <div class="row g-map">
+        <div id="g-map" style="height: {{ $style["height"] or '700px' }}; {{ $style["width"] or '100%' }}" data-lat="{{ $map["lat"] }}" data-lng="{{ $map["lng"] }}" data-zoom="15"></div>
     </div>
 </div>
 

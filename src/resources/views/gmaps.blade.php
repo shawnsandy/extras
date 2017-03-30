@@ -7,8 +7,7 @@
 @section('content')
 
 
-   @include("extras::g-maps.g-map", ["address" => "8328 Balm St Spring Hill, FL 34607", "map_height" => "700px"])
+   {{ Html::gmap("1600 Pennsylvania Ave NW, Washington, DC 20500", ["height" => '500px'], ['zoom' => 18]) }}
 
-   {!! Extras::getView('address')  !!}
 
 @endsection
