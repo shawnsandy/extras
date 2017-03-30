@@ -104,6 +104,15 @@ __Socialite SignIn__
 
  ```
 
+ __Laravel login component__ 
+
+ ``` php
+ 
+ {{ Html::login("Login Title Here") }}
+
+ ```
+
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
