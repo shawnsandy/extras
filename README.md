@@ -4,13 +4,13 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not neccessarialy included in the base Laravel install.
+Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not necessarily included in the base Laravel install.
 
 - Social Login 
 - Messaging (mail)
 - Maps (google)
 - Glide for Dynamic images 
-- Blades (login, register, alerts, contact...)
+- Components (login, register, alerts, contact...)
 
 __Coming Soon__
 
@@ -104,11 +104,19 @@ __Socialite SignIn__
 
  ```
 
- __Laravel login component__ 
+ __Laravel login component__ displays a login form
 
  ``` php
  
  {{ Html::login("Login Title Here") }}
+
+ ```
+
+ __Dynamic Images with Glide__ 
+
+ ``` php
+ 
+<img src="" >
 
  ```
 
@@ -121,7 +129,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ``` bash
 
-$ composer test
+// $ composer test
 
 ```
 
