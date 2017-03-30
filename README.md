@@ -91,6 +91,19 @@ __GMAPS (google maps) component__
 
 ```
 
+__Socialite SignIn__
+
+``` php
+
+ {{ Html::socialSignIn(
+
+     "Connect Via Social Media",  // title
+     ["facebook", "twitter"] // providers (facebook, twitter, linkedin, github)
+     
+     ) }}
+
+ ```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
