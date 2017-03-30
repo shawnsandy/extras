@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row g-map">
-        <div id="g-map" style="height: {{ $style["height"] or '700px' }}; {{ $style["width"] or '100%' }}" data-lat="{{ $map["lat"] }}" data-lng="{{ $map["lng"] }}" data-zoom="15"></div>
+        <div id="g-map" style="height: {{ $style["height"] or '700px' }}; {{ $style["width"] or '100%' }}" data-lat="{{ $map["lat"] }}" data-lng="{{ $map["lng"] }}" data-zoom="{{ $options["zoom"] or '15'}}"></div>
     </div>
 </div>
 

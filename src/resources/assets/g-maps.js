@@ -1,13 +1,10 @@
-/**
- * Created by shawnsandy on 2/22/17.
- */
 
 function initMap() {
-    var el = document.getElementById('map');
+    var el = document.getElementById('g-map');
+    var mapzoom = el.dataset.zoom ? Number(el.dataset.zoom) : 15;
     var uluru = {lat: Number(el.dataset.lat), lng: Number(el.dataset.lng)};
-    console.log(uluru);
     var map = new google.maps.Map(el, {
-        zoom: 15,
+        zoom: mapzoom,
         center: uluru,
         scrollwheel:  false
     });
@@ -21,5 +18,3 @@ function initMap() {
         map: map
     });
 }
-
-

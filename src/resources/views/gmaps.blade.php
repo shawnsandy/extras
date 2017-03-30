@@ -7,7 +7,7 @@
 @section('content')
 
 
-   {{ Html::gmap("1600 Pennsylvania Ave NW, Washington, DC 20500", ["height" => '500px'], ['zoom' => 18]) }}
+   {{ Html::gmap("1600 Pennsylvania Ave NW, Washington, DC 20500", ["height" => '680px'], ['zoom' => 16]) }}
 
 
 @endsection
