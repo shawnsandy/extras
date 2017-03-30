@@ -1,59 +1,60 @@
-{
-    "name": "shawnsandy/extras",
-    "type": "library",
-    "description": "Laravel descriptions",
-    "keywords": [
-        "shawnsandy",
-        "extras"
-    ],
-    "homepage": "https://github.com/shawnsandy/extras",
-    "license": "MIT",
-    "authors": [{
-        "name": "Shawn Sandy",
-        "email": "shawnsandy04@gmail.com",
-        "homepage": "https://github.com/shawnsandy",
-        "role": "Developer"
-    }],
-    "require": {
-        "php": "~5.6|~7.0",
-        "abraham/twitteroauth": "^0.7.2",
-        "laravelcollective/html": "^5.3.0",
-        "laravelcollective/remote": "^5.3.0",
-        "league/glide-laravel": "^1.0",
-        "laravel/socialite": "^2.0",
-        "thujohn/twitter": "^2.2"
-    },
-    "require-dev": {
-        "orchestra/testbench": "~3.3",
-        "orchestra/testbench-browser-kit": "~3.3",
-        "phpunit/phpunit": "~4.0||~5.0",
-        "squizlabs/php_codesniffer": "^2.3",
-        "illuminate/support": "~5.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "ShawnSandy\\Extras\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ShawnSandy\\Extras\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "phpunit",
-        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
-        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    }
-}    'Extras' => \ShawnSandy\Extras\ExtrasFacade::class,
+# Laravel Extras (Beta)
+
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Total Downloads][ico-downloads]][link-downloads]
+
+Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not neccessarialy included in the base Laravel install.
+
+- Social Login 
+- Messaging (mail)
+- Maps (google)
+- Glide for Dynamic images 
+- Blades (login, register, alerts, contact...)
+
+__Coming Soon__
+
+- Toastr alerts
+- Notifications
+- Push notifications
+- Backups
+
+
+## Install
+
+Via Composer
+
+``` bash
+
+$ composer require shawnsandy/extras
+
+```
+
+Open `config\app.php` and add the following
+
+* __Providers array__
+
+``` php
+
+'providers' => [
+   
+    ShawnSandy\Extras\ExtrasServicesProvider::class,
+    Thujohn\Twitter\TwitterServiceProvider::class,        
+    Collective\Html\HtmlServiceProvider::class,
+
+    // ###
+]
+
+```
+
+* __Aliases array__
+
+``` php
+    'aliases' => [
+
+    'Form' => Collective\Html\FormFacade::class,
+    'Html' => Collective\Html\HtmlFacade::class,
+    'Extras' => \ShawnSandy\Extras\ExtrasFacade::class,
     'Gmap' => \ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
     "Twitter" => \Thujohn\Twitter\Facades\Twitter::class,  
 
@@ -76,9 +77,17 @@ Route::group(['prefix' => "extras"], function () {
 
 ## Usage
 
+__GMAPS (google maps) component__
+
+
 ``` php
 
-// coming soon
+{{ Html::gmap(
+    "1600 Pennsylvania Ave NW, Washington, DC 20500", //address
+    ["height" => '680px'], // inline style
+    ['zoom' => 17, 'scroll' => 'true' ] // options map-zoom / scroll
+    ) 
+    }}
 
 ```
 
