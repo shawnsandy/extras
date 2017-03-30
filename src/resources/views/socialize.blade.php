@@ -19,7 +19,7 @@
 
                     <hr>
 
-                    <div class="social-links">
+                    <div class="social-sign-in">
                     {{ Html::socialSignIn("Connect Via Social Media", ["facebook", "twitter"] ) }}
                     </div>
 
