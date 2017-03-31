@@ -13,7 +13,7 @@ class Messages extends Mailable
 
     public $messages;
     private $email;
-    private $title,
+    private $title;
 
     /**
      * Create a new message instance.
