@@ -1,32 +1,31 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: Shawn
-     * Date: 2/22/2017
-     * Time: 10:03 PM
-     */
+/**
+ * Created by PhpStorm.
+ * User: Shawn
+ * Date: 2/22/2017
+ * Time: 10:03 PM
+ */
 
-    namespace ShawnSandy\Extras;
+namespace ShawnSandy\Extras;
 
 
-    class Extras
+use League\Glide\ServerFactory;
+
+class Extras
+{
+
+    public function routes()
     {
-
-        public function routes()
-        {
-            require __DIR__ . '/routes.php';
-        }
-
-
-
-        public function getView($view)
-        {
-            return \View::make("extras::partials.test");
-        }
-
-        public function gmap() {
-
-        }
-
-
+        require __DIR__ . '/routes.php';
     }
+
+
+    public function getView($view)
+    {
+        return \View::make("extras::partials.test");
+    }
+
+
+
+
+}

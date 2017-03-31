@@ -12,7 +12,7 @@ namespace ShawnSandy\Extras\Apps\Messaging;
 use Log;
 use Mail;
 use Exception;
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
 class MessagesController extends Controller

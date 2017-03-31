@@ -4,13 +4,13 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not neccessarialy included in the base Laravel install.
+Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not necessarily included in the base Laravel install.
 
 - Social Login 
 - Messaging (mail)
 - Maps (google)
 - Glide for Dynamic images 
-- Blades (login, register, alerts, contact...)
+- Components (login, register, alerts, contact...)
 
 __Coming Soon__
 
@@ -77,11 +77,50 @@ Route::group(['prefix' => "extras"], function () {
 
 ## Usage
 
+__GMAPS (google maps) component__
+
+
 ``` php
 
-// coming soon
+{{ Html::extrasMap(
+    "1600 Pennsylvania Ave NW, Washington, DC 20500", //address
+    ["height" => '680px'], // inline style
+    ['zoom' => 17, 'scroll' => 'true' ] // options map-zoom / scroll
+    ) 
+    }}
 
 ```
+
+__Socialite SignIn__
+
+``` php
+
+ {{ Html::networkLogin(
+
+     "Connect Via Social Media",  // title
+     ["facebook", "twitter"] // providers (facebook, twitter, linkedin, github)
+     
+     ) }}
+
+ ```
+
+ __Laravel login component__ displays a login form
+
+ ``` php
+ 
+ {{ Html::extrasLogin("Login Title Here") }}
+
+ ```
+
+ __Dynamic Images with Glide__ 
+
+ ``` php
+ 
+{{ Html::extrasImg("bg/01.jpg?w=500", ["class" => "img-circle", "alt" => "Glide image"]) }}
+
+
+ ```
+
 
 ## Change log
 
@@ -91,7 +130,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ``` bash
 
-$ composer test
+// $ composer test
 
 ```
 

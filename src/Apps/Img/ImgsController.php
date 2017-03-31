@@ -17,19 +17,34 @@
     class ImgsController extends Controller
     {
 
-        public function __invoke(Filesystem $filesystem, $path)
+        public function storage(Filesystem $filesystem, $path)
+
         {
+
             $server = ServerFactory::create([
                 'response' => new LaravelResponseFactory(app('request')),
                 'source' => $filesystem->getDriver(),
                 'cache' => $filesystem->getDriver(),
-                'source_path_prefix' => '/',
+                'source_path_prefix' => '/img/',
                 'cache_path_prefix' => '/.cache',
-                'base_url' => 'img'
+                'base_url' => '/img/'
             ]);
 
             return $server->getImageResponse($path, request()->all());
 
+        }
+
+        public function img($photo, $params = [])
+        {
+
+            $server = ServerFactory::create([
+                'source' => "img/",
+                'cache' => "img/",
+                'source_path_prefix' => '/',
+                'cache_path_prefix' => '/.cache',
+            ]);
+
+            return $server->outputImage($photo, request()->all());
         }
 
     }

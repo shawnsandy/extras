@@ -9,7 +9,7 @@
 namespace ShawnSandy\Extras\Apps\Maps;
 
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 
 class GMapsController extends Controller
 {
