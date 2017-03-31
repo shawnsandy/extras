@@ -8,9 +8,12 @@ Html::component(
     ]
 );
 
-Html::component(
-    "extrasLogin", "extras::shared.login", []
-);
+Html::component("fontIcon", "dash::components.icon", [
+    'name' => "circle-o",
+    "selector" => "fa fa-"
+]);
+
+Html::component( "extrasLogin", "extras::shared.login", [] );
 
 Html::component(
     "extrasImg", "extras::components.img", [
