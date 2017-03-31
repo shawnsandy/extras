@@ -1,1 +1,1 @@
-<img src="/extras/public/img/photo1.jpg?w=500" alt="">
+<img src="/extras/public/img/{{ $image_params or '' }}" alt="{{ $attributes["alt"] or ""}}" class="{{ $attributes["class"] or '' }}">
