@@ -17,7 +17,7 @@
     class ImgsController extends Controller
     {
 
-        public function __invoke(Filesystem $filesystem, $path)
+        public function storage(Filesystem $filesystem, $path)
 
         {
 
@@ -32,6 +32,19 @@
 
             return $server->getImageResponse($path, request()->all());
 
+        }
+
+        public function img($photo, $params = [])
+        {
+
+            $server = ServerFactory::create([
+                'source' => "img/",
+                'cache' => "img/",
+                'source_path_prefix' => '/',
+                'cache_path_prefix' => '/.cache',
+            ]);
+
+            return $server->outputImage($photo, request()->all());
         }
 
     }

@@ -1,41 +1,38 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: shawnsandy
-     * Date: 10/27/16
-     * Time: 12:58 PM
-     */
+/**
+ * Created by PhpStorm.
+ * User: shawnsandy
+ * Date: 10/27/16
+ * Time: 12:58 PM
+ */
 
-    use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Request;
 
-    Route::get('gmap', '\ShawnSandy\Extras\Apps\Maps\GMapsController');
+Route::get('gmap', '\ShawnSandy\Extras\Apps\Maps\GMapsController');
 
-    Route::get('/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController')->where('path', '.+');
+Route::get('/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@storage')->where('path', '.+');
 
-    Route::get("messages", '\ShawnSandy\Extras\Apps\ExtrasController@mail');
+Route::get('/public/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@img')->where('path', '.+');
 
-    Route::post("/sendmail", '\ShawnSandy\Extras\Apps\Messaging\MessagesController');
+Route::get("messages", '\ShawnSandy\Extras\Apps\ExtrasController@mail');
 
-    Route::get("/github/auth", '\ShawnSandy\Extras\Apps\Socialize\SocialLoginController@index');
+Route::post("/sendmail", '\ShawnSandy\Extras\Apps\Messaging\MessagesController');
 
-    Route::get("/github/login", '\ShawnSandy\Extras\Apps\Socialize\SocialLoginController@auth');
+Route::get("/github/auth", '\ShawnSandy\Extras\Apps\Socialize\SocialLoginController@index');
 
-    Route::get('/linkedin/auth', '\ShawnSandy\Extras\Apps\Socialize\LinkedInLoginController@index');
+Route::get("/github/login", '\ShawnSandy\Extras\Apps\Socialize\SocialLoginController@auth');
 
-    Route::get('/linkedin/login', '\ShawnSandy\Extras\Apps\Socialize\LinkedInLoginController@auth');
+Route::get('/linkedin/auth', '\ShawnSandy\Extras\Apps\Socialize\LinkedInLoginController@index');
 
-    Route::get('/facebook/auth', '\ShawnSandy\Extras\Apps\Socialize\FacebookLoginController@index');
+Route::get('/linkedin/login', '\ShawnSandy\Extras\Apps\Socialize\LinkedInLoginController@auth');
 
-    Route::get('/facebook/login', '\ShawnSandy\Extras\Apps\Socialize\FacebookLoginController@auth');
+Route::get('/facebook/auth', '\ShawnSandy\Extras\Apps\Socialize\FacebookLoginController@index');
 
-    Route::get('/twitter/auth', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@index');
+Route::get('/facebook/login', '\ShawnSandy\Extras\Apps\Socialize\FacebookLoginController@auth');
 
-    Route::get('/twitter/login', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@auth');
+Route::get('/twitter/auth', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@index');
 
-    Route::get('/public/{dir}/{image}', function ($dir = "/", $image) {
-        $params = request()->all();
-        return Extras::glideImg($image, $params, null);
-    })->where('path', '.+');
+Route::get('/twitter/login', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@auth');
 
 
 

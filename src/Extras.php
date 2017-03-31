@@ -25,17 +25,7 @@ class Extras
         return \View::make("extras::partials.test");
     }
 
-    public function glideImg($photo, $params = [], $dir = "/")
-    {
-        $server = ServerFactory::create([
-            'source' => $dir,
-            'cache' => $dir,
-            'source_path_prefix' => '/',
-            'cache_path_prefix' => '/.cache',
-        ]);
 
-        return $server->outputImage($photo, $params);
-    }
 
 
 }
