@@ -116,7 +116,11 @@ __Socialite SignIn__
 
  ``` php
  
+ // from public/img 
 {{ Html::extrasImg("bg/01.jpg?w=500", ["class" => "img-circle", "alt" => "Glide image"]) }}
+
+// from your storage directory
+{{ Html::extrasImg("photo1.jpg?w=500", ["class" => "img-responsive", "alt" => "Glide image"], "/extras/img/") }}
 
 
  ```
