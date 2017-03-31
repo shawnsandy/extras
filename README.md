@@ -82,7 +82,7 @@ __GMAPS (google maps) component__
 
 ``` php
 
-{{ Html::gmap(
+{{ Html::extrasMap(
     "1600 Pennsylvania Ave NW, Washington, DC 20500", //address
     ["height" => '680px'], // inline style
     ['zoom' => 17, 'scroll' => 'true' ] // options map-zoom / scroll
@@ -95,7 +95,7 @@ __Socialite SignIn__
 
 ``` php
 
- {{ Html::socialSignIn(
+ {{ Html::networkLogin(
 
      "Connect Via Social Media",  // title
      ["facebook", "twitter"] // providers (facebook, twitter, linkedin, github)
@@ -108,7 +108,7 @@ __Socialite SignIn__
 
  ``` php
  
- {{ Html::login("Login Title Here") }}
+ {{ Html::extrasLogin("Login Title Here") }}
 
  ```
 
@@ -116,7 +116,8 @@ __Socialite SignIn__
 
  ``` php
  
-<img src="" >
+{{ Html::extrasImg("bg/01.jpg?w=500", ["class" => "img-circle", "alt" => "Glide image"]) }}
+
 
  ```
 
