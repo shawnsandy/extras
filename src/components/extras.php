@@ -13,9 +13,10 @@ Html::component(
 );
 
 Html::component(
-    "extrasImg", "extras::components.img",[
+    "extrasImg", "extras::components.img", [
         "image_params",
-        "attributes" => []
+        "attributes" => [],
+        "action" => "/extras/public/img/"
     ]
 );
 
