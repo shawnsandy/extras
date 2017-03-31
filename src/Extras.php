@@ -9,6 +9,8 @@
     namespace ShawnSandy\Extras;
 
 
+    use League\Glide\ServerFactory;
+
     class Extras
     {
 
@@ -24,8 +26,15 @@
             return \View::make("extras::partials.test");
         }
 
-        public function gmap() {
+        public function glideImg($photo, $params = [])
+        {
+            $server = ServerFactory::create([
+                'source' => 'img/',
+                'cache' => 'img/',
+                'cache_path_prefix' => '.cache'
+            ]);
 
+            return $server->outputImage($photo, $params);
         }
 
 
