@@ -25,9 +25,9 @@
                 'response' => new LaravelResponseFactory(app('request')),
                 'source' => $filesystem->getDriver(),
                 'cache' => $filesystem->getDriver(),
-                'source_path_prefix' => '/',
+                'source_path_prefix' => '/img/',
                 'cache_path_prefix' => '/.cache',
-                'base_url' => 'img'
+                'base_url' => '/img/'
             ]);
 
             return $server->getImageResponse($path, request()->all());

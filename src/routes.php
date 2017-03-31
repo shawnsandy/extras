@@ -10,7 +10,7 @@
 
     Route::get('gmap', '\ShawnSandy\Extras\Apps\Maps\GMapsController');
 
-    Route::get('/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController')->where('path', '.*');
+    Route::get('/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController')->where('path', '.+');
 
     Route::get("messages", '\ShawnSandy\Extras\Apps\ExtrasController@mail');
 
@@ -32,10 +32,10 @@
 
     Route::get('/twitter/login', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@auth');
 
-    Route::get('/img/{image}', function ($image) {
+    Route::get('/public/{dir}/{image}', function ($dir = "/", $image) {
         $params = request()->all();
-        Extras::glideImg($image, $params);
-    });
+        return Extras::glideImg($image, $params, null);
+    })->where('path', '.+');
 
 
 
