@@ -18,7 +18,9 @@
     {
 
         public function __invoke(Filesystem $filesystem, $path)
+
         {
+
             $server = ServerFactory::create([
                 'response' => new LaravelResponseFactory(app('request')),
                 'source' => $filesystem->getDriver(),
