@@ -19,7 +19,7 @@
     );
 
     Html::component(
-        "socialSignIn", "extras::components.social-signup", [
+        "networkLogin", "extras::components.social-signup", [
         "title" => "Connect via social media" ,
         "providers" => ["facebook", "twitter", "github", "linkedin"]
         ]
