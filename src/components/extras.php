@@ -30,3 +30,11 @@ Html::component(
     ]
 );
 
+
+Html::component(
+    "materialIcon", "extras::components.svg-icon", [
+        "icon_name",
+        "svg_sprite_path" => "/assets/extras/svg/material-sprite.svg",
+    ]
+);
+
