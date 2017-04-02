@@ -13,16 +13,19 @@ class Messages extends Mailable
 
     public $messages;
     private $email;
+    private $title;
 
     /**
      * Create a new message instance.
      *
      * @param $messages mixed
+     * @param string $title
      */
-    public function __construct($messages)
+    public function __construct($messages, $title = "System Message")
     {
         $this->messages = $messages ;
-        $this->email = (isset($messages['from']) ? $messages['from'] : config('mail.from.address'));
+        $this->email = config('mail.from.address');
+        $this->$this->title = $$title ;
     }
 
     /**
@@ -32,7 +35,7 @@ class Messages extends Mailable
      */
     public function build()
     {
-        return $this->from($this->email, "Messages")
+        return $this->from($this->email, $this->title)
             ->subject('Subject: '.$this->messages['subject'])
             ->view('extras::messages.email');
     }

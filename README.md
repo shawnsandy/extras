@@ -116,10 +116,34 @@ __Socialite SignIn__
 
  ``` php
  
+ // from public/img 
 {{ Html::extrasImg("bg/01.jpg?w=500", ["class" => "img-circle", "alt" => "Glide image"]) }}
+
+// from your storage directory
+{{ Html::extrasImg("photo1.jpg?w=500", ["class" => "img-responsive", "alt" => "Glide image"], "/extras/img/") }}
 
 
  ```
+
+
+__SVG ICONS___
+
+[Material Icons](https://material.io/icons/)
+
+``` php
+
+ {{ Html::materialIcon("material-add-circle") }
+ 
+```
+
+
+ [Entypo Icons](http://www.entypo.com/)
+
+ ``` php 
+ 
+  {{ Html::entypoIcon("entypo-adjust") }}
+  
+```
 
 
 ## Change log
