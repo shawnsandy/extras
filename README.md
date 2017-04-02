@@ -126,6 +126,26 @@ __Socialite SignIn__
  ```
 
 
+__SVG ICONS___
+
+[Material Icons](https://material.io/icons/)
+
+``` php
+
+ {{ Html::materialIcon("material-add-circle") }
+ 
+```
+
+
+ [Entypo Icons](http://www.entypo.com/)
+
+ ``` php 
+ 
+  {{ Html::entypoIcon("entypo-adjust") }}
+  
+```
+
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

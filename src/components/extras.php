@@ -30,11 +30,20 @@ Html::component(
     ]
 );
 
-
+/*
+ * SVG icons
+ * */
 Html::component(
     "materialIcon", "extras::components.svg-icon", [
         "icon_name",
         "svg_sprite_path" => "/assets/extras/svg/material-sprite.svg",
+    ]
+);
+
+Html::component(
+    "entypoIcon", "extras::components.svg-icon", [
+        "icon_name",
+        "svg_sprite_path" => "/assets/extras/svg/entypo-sprite.svg",
     ]
 );
 
