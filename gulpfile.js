@@ -58,9 +58,14 @@ gulp.task('copy:fonts', function() {
 
 gulp.task('build', function() {
     gulp.src([
-            './node_modules/aos/dist/**/*.*',
+            './node_modules/aos/dist/**/*.*'
         ], { 'base': 'node_modules' })
         .pipe(gulp.dest('src/public/assets/'))
+});
+
+
+gulp.task('svg', function(){
+   gulp.src([ './src/public/svg' ])
 });
 
 
@@ -81,9 +86,9 @@ gulp.task('watch:sass', function() {
 });
 
 gulp.task("copy-dev", function() {
-    gulp.src("./src/public/css/pagekit/**/*.css", { 'base': "./src/public/css/pagekit/" })
-        .pipe(changed('../../../public/css/pagekit/'))
-        .pipe(gulp.dest('../../../public/css/pagekit/'))
+    gulp.src("./src/public/css/extras/**/*.css", { 'base': "./src/public/css/extras/" })
+        .pipe(changed('../../../public/css/extras/'))
+        .pipe(gulp.dest('../../../public/css/extras/'))
         .pipe(notify({
             title: "Dev Copy",
             message: "Asset folder copies",
