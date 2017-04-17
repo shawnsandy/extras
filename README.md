@@ -77,7 +77,7 @@ Route::group(['prefix' => "extras"], function () {
 
 ## Usage
 
-__Custom Error Page__
+__Custom Error Pages__
 
 ``` php
 
