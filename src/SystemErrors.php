@@ -6,7 +6,7 @@
  * Time: 10:31 AM
  */
 
-namespace ShawnSandy\Dash;
+namespace ShawnSandy\Extras;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

@@ -77,6 +77,18 @@ Route::group(['prefix' => "extras"], function () {
 
 ## Usage
 
+__Custom Error Page__
+
+``` php
+
+  if (env("APP_DEBUG") == false && env("APP_ENV") === "production"):
+
+            return app(SystemErrors::class)->renderErrors($request, $exception);
+
+  endif;
+  
+```
+
 __GMAPS (google maps) component__
 
 
