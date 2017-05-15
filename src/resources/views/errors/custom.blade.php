@@ -35,12 +35,17 @@
                 font-size: 72px;
                 margin-bottom: 40px;
             }
+
+            .lead {
+                font-size: 21px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Page Not Found</div>
+                <div class="title h1">OHOOOOO... You broke it now!</div>
+                <p class="lead text-center">I'm Telling our dev team about this</p>
             </div>
         </div>
     </body>
