@@ -10,19 +10,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-body">
-
-                    @if(!Auth::check())
-                        <h3 class="text-center">Sign In Email / Password</h3>
-                        <hr>
-                        {{ Html::login() }}
-                    @endif
-
-                    <hr>
-
-                    <div class="social-sign-in">
-                    {{ Html::socialSignIn("Connect Via Social Media", ["facebook", "twitter"] ) }}
-                    </div>
-
+                    @include("extras::partials.signup")
                 </div>
             </div>
 
