@@ -19,6 +19,7 @@ __Coming Soon__
 - Push notifications
 - Backups
 
+### [Read the docs](/docs)
 
 ## Install
 
