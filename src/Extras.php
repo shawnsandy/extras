@@ -9,6 +9,7 @@
 namespace ShawnSandy\Extras;
 
 
+use Illuminate\Support\HtmlString;
 use League\Glide\ServerFactory;
 
 class Extras
@@ -25,7 +26,8 @@ class Extras
         return \View::make("extras::partials.test");
     }
 
-
-
+    public function toHtmlString($html_String) {
+        return new HtmlString($html_String);
+    }
 
 }
