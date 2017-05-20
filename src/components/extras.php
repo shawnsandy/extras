@@ -13,6 +13,16 @@ Html::component("fontIcon", "dash::components.icon", [
     "selector" => "fa fa-"
 ]);
 
+Html::macro('entypoStylesheet', function(){
+   $css = "<link rel=\"stylesheet\" href=\"/assets/extras/entypo/style.css\">";
+   return Extras::toHtmlString($css);
+});
+
+Html::macro('entypoFont', function($name = "circle") {
+  $icon = Extras::toHtmlString("<span class=\"entypo entypo-{$name}\"></span>");
+  return $icon ;
+});
+
 Html::component( "extrasLogin", "extras::shared.login", [] );
 
 Html::component(
