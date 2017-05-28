@@ -35,7 +35,7 @@ Open `config\app.php` and add the following
 
 * __Providers array__
 
-The Extras service provider auto loads the required providers in one go.
+The Extras service provider auto loads the required providers / Facade for the following package in one go.
 
 - 'davestewart\sketchpad\SketchpadServiceProvider'
 - 'Collective\Remote\RemoteServiceProvider'
@@ -55,15 +55,23 @@ ShawnSandy\Extras\ExtrasServiceProvider::class,
 
 ```
 
-
+or load them on you lonesome `:(`
 
 ```php
 
 'providers' => [
    
     ShawnSandy\Extras\ExtrasProvider::class,
+    // --- packages -----
     Thujohn\Twitter\TwitterServiceProvider::class,        
     Collective\Html\HtmlServiceProvider::class,
+    davestewart\sketchpad\SketchpadServiceProvider'
+    Collective\Remote\RemoteServiceProvider'
+    Collective\Html\HtmlServiceProvider'
+    Mews\Purifier\PurifierServiceProvider'
+    Thujohn\Twitter\TwitterServiceProvider'
+    Brotzka\DotenvEditor\DotenvEditorServiceProvider'
+    Laravel\Socialite\SocialiteServiceProvider'
 
     // ###
 ]
