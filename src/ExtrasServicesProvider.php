@@ -114,6 +114,7 @@
             $this->app->register('Thujohn\Twitter\TwitterServiceProvider');
             $this->app->register('Brotzka\DotenvEditor\DotenvEditorServiceProvider');
             $this->app->register('Laravel\Socialite\SocialiteServiceProvider');
+            $this->app->register('Zondicons\ZondiconsServiceProvider');
 
 
 

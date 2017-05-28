@@ -4,8 +4,8 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not necessarily included in the base Laravel install.
-
+Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not necessarily included in the base Laravel install. 
+ 
 - Social Login 
 - Messaging (mail)
 - Maps (google)
