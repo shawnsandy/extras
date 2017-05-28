@@ -92,7 +92,7 @@
                 return new TwitterAuth();
             });
 
-         $this->loadDependencies();
+            $this->loadDependencies();
 
 
         }
@@ -125,7 +125,7 @@
             $aliases->alias("Form", 'Collective\Html\FormFacade');
             $aliases->alias('Purifier', 'Mews\Purifier\Facades\Purifier::class');
             $aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
-            $aliases->alias('DotenvEditor','Brotzka\DotenvEditor\DotenvEditorFacade');
+            $aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
             $aliases->alias('Socialite', 'Laravel\Socialite\Facades\Socialite');
 
 
@@ -133,17 +133,16 @@
              * Dev resources
              */
 
-            if($this->app->environment() !== "production") {
+            if ($this->app->environment() !== "production") {
 
                 $this->app->register('Barryvdh\Debugbar\ServiceProvider');
 
                 $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
 
 
-                $aliases->alias('Debugbar','Barryvdh\Debugbar\Facade');
+                $aliases->alias('Debugbar', 'Barryvdh\Debugbar\Facade');
 
             }
-
 
 
         }
