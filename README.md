@@ -4,8 +4,8 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not necessarily included in the base Laravel install.
-
+Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not necessarily included in the base Laravel install. 
+ 
 - Social Login 
 - Messaging (mail)
 - Maps (google)
@@ -25,7 +25,7 @@ __Coming Soon__
 
 Via Composer
 
-``` bash
+```bash
 
 $ composer require shawnsandy/extras
 
@@ -35,13 +35,43 @@ Open `config\app.php` and add the following
 
 * __Providers array__
 
-``` php
+The Extras service provider auto loads the required providers / Facade for the following package in one go.
+
+- 'davestewart\sketchpad\SketchpadServiceProvider'
+- 'Collective\Remote\RemoteServiceProvider'
+- 'Collective\Html\HtmlServiceProvider'
+- 'Mews\Purifier\PurifierServiceProvider'
+- 'Thujohn\Twitter\TwitterServiceProvider'
+- 'Brotzka\DotenvEditor\DotenvEditorServiceProvider'
+- 'Laravel\Socialite\SocialiteServiceProvider'
+- ...
+
+
+```php
+
+'providers' => [
+ShawnSandy\Extras\ExtrasServiceProvider::class,
+]
+
+```
+
+or load them on you lonesome `:(`
+
+```php
 
 'providers' => [
    
-    ShawnSandy\Extras\ExtrasServicesProvider::class,
+    ShawnSandy\Extras\ExtrasProvider::class,
+    // --- packages -----
     Thujohn\Twitter\TwitterServiceProvider::class,        
     Collective\Html\HtmlServiceProvider::class,
+    davestewart\sketchpad\SketchpadServiceProvider'
+    Collective\Remote\RemoteServiceProvider'
+    Collective\Html\HtmlServiceProvider'
+    Mews\Purifier\PurifierServiceProvider'
+    Thujohn\Twitter\TwitterServiceProvider'
+    Brotzka\DotenvEditor\DotenvEditorServiceProvider'
+    Laravel\Socialite\SocialiteServiceProvider'
 
     // ###
 ]
@@ -66,7 +96,7 @@ Open `config\app.php` and add the following
 
  __Routes__
 
-``` php
+```php
 
 Route::group(['prefix' => "extras"], function () {
     Extras::routes();

@@ -1,7 +1,6 @@
 @if (count($errors) > 0)
 
     <div>
-
             <p class="alert alert-danger alert-dismissible">
                 Opps! There was an error processing your submission, please review the form and submit again.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">

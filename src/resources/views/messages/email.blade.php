@@ -11,7 +11,6 @@
         </h2>
         <hr style=" border: 0;  height: 1px;  background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);">
 
-
         @foreach($messages as $message => $line)
 
             <div style="margin-bottom: 20px">
@@ -23,6 +22,7 @@
             </div>
 
         @endforeach
+
         <hr style=" border: 0;  height: 1px;  background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);">
     </section>
 
