@@ -23,6 +23,8 @@ Html::macro('entypoFont', function($name = "circle") {
   return $icon ;
 });
 
+
+
 Html::component( "extrasLogin", "extras::shared.login", [] );
 
 Html::component(

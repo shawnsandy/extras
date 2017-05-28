@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ab7b70a3c8d99b35a053594c5926836",
-    "content-hash": "8da473b8e695ea967efd8aebc9775fbe",
+    "hash": "940ae896ed3f784371084ab05ff7280e",
+    "content-hash": "5a01b1656f70e55b54c7fedebfaeb4a2",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -1700,6 +1700,50 @@
                 "watermark"
             ],
             "time": "2017-04-23 18:45:36"
+        },
+        {
+            "name": "kitetail/zttp",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kitetail/zttp.git",
+                "reference": "a48e984d5937b85599848b75845818a8fa55f1a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kitetail/zttp/zipball/a48e984d5937b85599848b75845818a8fa55f1a5",
+                "reference": "a48e984d5937b85599848b75845818a8fa55f1a5",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Zttp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "description": "A super simple HTTP client that seems fine.",
+            "keywords": [
+                "Guzzle",
+                "http"
+            ],
+            "time": "2017-05-26 14:33:49"
         },
         {
             "name": "laracasts/flash",
