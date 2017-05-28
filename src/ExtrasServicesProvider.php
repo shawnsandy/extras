@@ -104,7 +104,6 @@
 
             /*
              * load service providers
-             *
              */
 
             $this->app->register('davestewart\sketchpad\SketchpadServiceProvider');
@@ -115,8 +114,7 @@
             $this->app->register('Brotzka\DotenvEditor\DotenvEditorServiceProvider');
             $this->app->register('Laravel\Socialite\SocialiteServiceProvider');
             $this->app->register('Zondicons\ZondiconsServiceProvider');
-
-
+            $this->app->register('Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider');
 
 
             /*
