@@ -25,7 +25,7 @@ __Coming Soon__
 
 Via Composer
 
-``` bash
+```bash
 
 $ composer require shawnsandy/extras
 
@@ -35,11 +35,33 @@ Open `config\app.php` and add the following
 
 * __Providers array__
 
-``` php
+The Extras service provider auto loads the required providers in one go.
+
+- 'davestewart\sketchpad\SketchpadServiceProvider'
+- 'Collective\Remote\RemoteServiceProvider'
+- 'Collective\Html\HtmlServiceProvider'
+- 'Mews\Purifier\PurifierServiceProvider'
+- 'Thujohn\Twitter\TwitterServiceProvider'
+- 'Brotzka\DotenvEditor\DotenvEditorServiceProvider'
+- 'Laravel\Socialite\SocialiteServiceProvider'
+- ...
+
+
+```php
+
+'providers' => [
+ShawnSandy\Extras\ExtrasServiceProvider::class,
+]
+
+```
+
+
+
+```php
 
 'providers' => [
    
-    ShawnSandy\Extras\ExtrasServicesProvider::class,
+    ShawnSandy\Extras\ExtrasProvider::class,
     Thujohn\Twitter\TwitterServiceProvider::class,        
     Collective\Html\HtmlServiceProvider::class,
 
@@ -66,7 +88,7 @@ Open `config\app.php` and add the following
 
  __Routes__
 
-``` php
+```php
 
 Route::group(['prefix' => "extras"], function () {
     Extras::routes();
