@@ -23,6 +23,10 @@ Html::macro('entypoFont', function($name = "circle") {
   return $icon ;
 });
 
+Html::macro('tooltip', function($tip, $position = 'right') {
+   $tip = Extras::toHtmlString("data-wenk=\"{$tip}\" data-wenk-pos=\"{$position}\"");
+   return $tip ;
+});
 
 
 Html::component( "extrasLogin", "extras::shared.login", [] );
