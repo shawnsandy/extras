@@ -49,7 +49,7 @@
              * Package config
              */
             $this->publishes(
-                [__DIR__ . '/config/config.php' => config_path('extras.php')],
+                [__DIR__ . '/config/config.php' => config_path('extras/settings.php')],
                 'extras-config'
             );
 
@@ -106,9 +106,9 @@
              * load service providers
              */
 
-            $this->app->register('davestewart\sketchpad\SketchpadServiceProvider');
-            $this->app->register('Collective\Remote\RemoteServiceProvider');
-            $this->app->register('Collective\Html\HtmlServiceProvider');
+            $this->app->register(\davestewart\sketchpad\SketchpadServiceProvider::class);
+            $this->app->register(\Collective\Remote\RemoteServiceProvider::class);
+            $this->app->register(\Collective\Html\HtmlServiceProvider::class);
             $this->app->register('Mews\Purifier\PurifierServiceProvider');
             $this->app->register('Thujohn\Twitter\TwitterServiceProvider');
             $this->app->register('Brotzka\DotenvEditor\DotenvEditorServiceProvider');
@@ -121,8 +121,8 @@
              * Load aliases / facades
              */
 
-            $aliases->alias("Html", 'Collective\Html\HtmlFacade');
-            $aliases->alias("Form", 'Collective\Html\FormFacade');
+            $aliases->alias("Html", \Collective\Html\HtmlFacade::class);
+            $aliases->alias("Form", \Collective\Html\FormFacade::class);
             $aliases->alias('Purifier', 'Mews\Purifier\Facades\Purifier::class');
             $aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
             $aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
@@ -149,4 +149,3 @@
 
 
     }
-
