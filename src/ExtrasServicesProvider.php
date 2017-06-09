@@ -92,15 +92,17 @@
                 return new TwitterAuth();
             });
 
-            $this->loadDependencies();
+            $this->loadProviders();
+
+            $this->loadAliases();
 
 
         }
 
-        public function loadDependencies()
+        public function loadProviders()
         {
 
-            $aliases = \Illuminate\Foundation\AliasLoader::getInstance();
+
 
             /*
              * load service providers
@@ -115,18 +117,8 @@
             $this->app->register('Laravel\Socialite\SocialiteServiceProvider');
             $this->app->register('Zondicons\ZondiconsServiceProvider');
             $this->app->register('Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider');
+            $this->app->register(\AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class);
 
-
-            /*
-             * Load aliases / facades
-             */
-
-            $aliases->alias("Html", \Collective\Html\HtmlFacade::class);
-            $aliases->alias("Form", \Collective\Html\FormFacade::class);
-            $aliases->alias('Purifier', 'Mews\Purifier\Facades\Purifier::class');
-            $aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
-            $aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
-            $aliases->alias('Socialite', 'Laravel\Socialite\Facades\Socialite');
 
 
             /*
@@ -139,6 +131,31 @@
 
                 $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
 
+            }
+
+
+        }
+
+        public function loadAliases() {
+
+
+            /*
+             * Load aliases / facades
+             */
+            $aliases = \Illuminate\Foundation\AliasLoader::getInstance();
+
+            $aliases->alias("Html", \Collective\Html\HtmlFacade::class);
+            $aliases->alias("Form", \Collective\Html\FormFacade::class);
+            $aliases->alias('Purifier', 'Mews\Purifier\Facades\Purifier::class');
+            $aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
+            $aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
+            $aliases->alias('Socialite', 'Laravel\Socialite\Facades\Socialite');
+
+            /*
+           * Dev resources
+           */
+
+            if ($this->app->environment() !== "production") {
 
                 $aliases->alias('Debugbar', 'Barryvdh\Debugbar\Facade');
 
