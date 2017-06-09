@@ -29,7 +29,7 @@
         "laracasts/flash": "^2.0",
         "laracasts/generators": "^1.1",
         "laracasts/utilities": "^2.1",
-        "laravel/socialite": "^2.0",
+        "laravel/socialite": "^3.0",
         "laravelcollective/html": "^5.4.0||^5.3.1",
         "laravelcollective/remote": "^5.4.0||^5.3.1",
         "league/glide-laravel": "^1.0",
