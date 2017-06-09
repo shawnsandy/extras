@@ -14,7 +14,7 @@ Route::get('/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@storage')-
 
 Route::get('/public/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@img')->where('path', '.+');
 
-Route::get("messages", '\ShawnSandy\Extras\Apps\ExtrasController@mail');
+Route::get("/messages", '\ShawnSandy\Extras\Apps\ExtrasController@mail');
 
 Route::post("/sendmail", '\ShawnSandy\Extras\Apps\Messaging\MessagesController');
 
