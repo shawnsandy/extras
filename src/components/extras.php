@@ -36,7 +36,6 @@
         return $tip;
     });
 
-
     Html::component("extrasLogin", "extras::shared.login", []);
 
     Html::component(

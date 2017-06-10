@@ -30,9 +30,9 @@
          * @param array $params
          * @return mixed
          */
-        public function img($photo, $params = [])
+        public function img($dir, $photo)
         {
-            return Extras::glidePublic($photo);
+            return Extras::glidePublic($dir, $photo);
         }
 
 

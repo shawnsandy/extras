@@ -59,11 +59,11 @@
         /**
          * @param $photo
          */
-        public function glidePublic($photo)
+        public function glidePublic($dir, $photo)
         {
             $server = ServerFactory::create([
-                'source' => "img/",
-                'cache' => "img/",
+                'source' => "$dir/",
+                'cache' => "$dir/",
                 'source_path_prefix' => '/',
                 'cache_path_prefix' => '/.cache',
             ]);

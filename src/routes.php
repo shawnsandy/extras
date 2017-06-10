@@ -12,7 +12,7 @@ Route::get('gmap', '\ShawnSandy\Extras\Apps\Maps\GMapsController');
 
 Route::get('/glide/{dir}/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@storage')->where('path', '.+');
 
-Route::get('/public/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@img')->where('path', '.+');
+Route::get('/public/{dir}/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@img')->where('path', '.+');
 
 Route::get("messages", '\ShawnSandy\Extras\Apps\ExtrasController@mail');
 
