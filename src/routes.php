@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Request;
 
 Route::get('gmap', '\ShawnSandy\Extras\Apps\Maps\GMapsController');
 
-Route::get('/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@storage')->where('path', '.+');
+Route::get('/glide/{dir}/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@storage')->where('path', '.+');
 
 Route::get('/public/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@img')->where('path', '.+');
 

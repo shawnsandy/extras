@@ -21,9 +21,9 @@
          */
         public function boot()
         {
-            if (!$this->app->routesAreCached()) {
-                include __DIR__ . '/routes.php';
-            }
+//            if (!$this->app->routesAreCached()) {
+//                include __DIR__ . '/routes.php';
+//            }
 
             /**
              * Package views
@@ -127,6 +127,7 @@
             $aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
             $aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
             $aliases->alias('Socialite', 'Laravel\Socialite\Facades\Socialite');
+            $aliases->alias('Gmap', \ShawnSandy\Extras\Apps\Maps\MapsFacade::class);
 
 
             /*

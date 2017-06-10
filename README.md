@@ -156,6 +156,8 @@ __Socialite SignIn__
  ```
 
  __Dynamic Images with Glide__ 
+ 
+ Output the full path to your image `<img src="path/to/image?w=400 ?>`
 
  ``` php
  
@@ -165,9 +167,7 @@ __Socialite SignIn__
 // from your storage directory
 {{ Html::extrasImg("photo1.jpg?w=500", ["class" => "img-responsive", "alt" => "Glide image"], "/extras/img/") }}
 
-
  ```
-
 
 __SVG ICONS___
 
