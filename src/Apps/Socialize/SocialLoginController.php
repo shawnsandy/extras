@@ -32,8 +32,7 @@
         public function __construct()
         {
             $this->socializer = App::make('ShawnSandy\Extras\Apps\Socialize\Socializer');
-            $this->socializer->setProvider('github')
-                ->setScopes(['user']);
+            $this->socializer->setProvider('github')->setScopes(['user']);
         }
 
         /**

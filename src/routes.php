@@ -34,5 +34,3 @@ Route::get('/twitter/auth', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLo
 
 Route::get('/twitter/login', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@auth');
 
-
-
