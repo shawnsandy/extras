@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ab7b70a3c8d99b35a053594c5926836",
-    "content-hash": "8da473b8e695ea967efd8aebc9775fbe",
+    "hash": "bea0e04da7af880b593a26ab9581f00b",
+    "content-hash": "d56b6385e4e00b31c95c993d852c2ef8",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -60,6 +60,58 @@
                 "twitter"
             ],
             "time": "2017-06-01 00:28:10"
+        },
+        {
+            "name": "albertcht/invisible-recaptcha",
+            "version": "v1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/albertcht/invisible-recaptcha.git",
+                "reference": "d0d9c0b822d48b2728470ae0bd4c56cdb78a05fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/albertcht/invisible-recaptcha/zipball/d0d9c0b822d48b2728470ae0bd4c56cdb78a05fe",
+                "reference": "d0d9c0b822d48b2728470ae0bd4c56cdb78a05fe",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+                "php": "^5.6.4 || ^7.0"
+            },
+            "require-dev": {
+                "illuminate/view": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+                "phpunit/phpunit": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AlbertCht\\InvisibleReCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@gmail.com"
+                }
+            ],
+            "description": "Invisible reCAPTCHA For Laravel.",
+            "keywords": [
+                "captcha",
+                "invisible",
+                "invisible-recaptcha",
+                "laravel",
+                "laravel5",
+                "no-captcha",
+                "php",
+                "recaptcha"
+            ],
+            "time": "2017-06-08 14:56:52"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1842,23 +1894,23 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v2.0.21",
+            "version": "v3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "c4e4337e5b70149fdbefbb95b2c9e93d0749c413"
+                "reference": "bca777a8526983e0ebdf3350f1b6e031923a473b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/c4e4337e5b70149fdbefbb95b2c9e93d0749c413",
-                "reference": "c4e4337e5b70149fdbefbb95b2c9e93d0749c413",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/bca777a8526983e0ebdf3350f1b6e031923a473b",
+                "reference": "bca777a8526983e0ebdf3350f1b6e031923a473b",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "~5.0|~6.0",
-                "illuminate/contracts": "~5.0",
-                "illuminate/http": "~5.0",
-                "illuminate/support": "~5.0",
+                "guzzlehttp/guzzle": "~6.0",
+                "illuminate/contracts": "~5.4",
+                "illuminate/http": "~5.4",
+                "illuminate/support": "~5.4",
                 "league/oauth1-client": "~1.0",
                 "php": ">=5.4.0"
             },
@@ -1884,7 +1936,7 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
@@ -1892,7 +1944,7 @@
                 "laravel",
                 "oauth"
             ],
-            "time": "2017-03-27 21:32:28"
+            "time": "2017-05-05 14:17:11"
         },
         {
             "name": "laravelcollective/html",
@@ -3279,16 +3331,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.3.1",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "dee1c8b1e040d7dec299e4133c8105538cb2e5c7"
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dee1c8b1e040d7dec299e4133c8105538cb2e5c7",
-                "reference": "dee1c8b1e040d7dec299e4133c8105538cb2e5c7",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
                 "shasum": ""
             },
             "require": {
@@ -3300,7 +3352,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -3334,7 +3386,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-05-29 17:37:41"
+            "time": "2017-06-09 14:24:12"
         },
         {
             "name": "symfony/routing",
@@ -3779,12 +3831,12 @@
             "version": "0.9.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/padraic/mockery.git",
+                "url": "https://github.com/mockery/mockery.git",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856",
                 "shasum": ""
             },
