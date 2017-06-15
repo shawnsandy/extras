@@ -38,6 +38,8 @@
 
     Html::component("extrasLogin", "extras::shared.login", []);
 
+    Html::component("choicesJs", "extras::shared.choices",[]);
+
     Html::component(
         "extrasPublic", "extras::components.img", [
             "image_params",
