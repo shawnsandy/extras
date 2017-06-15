@@ -40,6 +40,8 @@
 
     Html::component("choicesJs", "extras::shared.choices",[]);
 
+    Html::component("select2Js", "extras::partials.select2js",[]);
+
     Html::component(
         "extrasPublic", "extras::components.img", [
             "image_params",

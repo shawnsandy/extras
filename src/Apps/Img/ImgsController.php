@@ -26,9 +26,10 @@
         }
 
         /**
-         * @param       $photo
-         * @param array $params
+         * @param $dir
+         * @param $photo
          * @return mixed
+         * @internal param array $params
          */
         public function img($dir, $photo)
         {
