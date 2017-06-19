@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Request;
 
 Route::get('gmap', '\ShawnSandy\Extras\Apps\Maps\GMapsController');
 
-Route::get('/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@storage')->where('path', '.+');
+Route::get('/glide/{dir}/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@storage')->where('path', '.+');
 
-Route::get('/public/img/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@img')->where('path', '.+');
+Route::get('/public/{dir}/{path}', '\ShawnSandy\Extras\Apps\Img\ImgsController@img')->where('path', '.+');
 
 Route::get("messages", '\ShawnSandy\Extras\Apps\ExtrasController@mail');
 
@@ -33,6 +33,4 @@ Route::get('/facebook/login', '\ShawnSandy\Extras\Apps\Socialize\FacebookLoginCo
 Route::get('/twitter/auth', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@index');
 
 Route::get('/twitter/login', '\ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterLoginController@auth');
-
-
 

@@ -29,7 +29,7 @@
         public function index()
         {
             $url = $this->twitter->redirectUrl(config("services.twitter.redirect"))->auth();
-            dd($url);
+            //dd($url);
 
             if ($url)
                 return redirect($url);

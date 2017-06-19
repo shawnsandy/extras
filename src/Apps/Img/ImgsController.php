@@ -9,42 +9,33 @@
     namespace ShawnSandy\Extras\Apps\Img;
 
 
-    use League\Glide\Responses\LaravelResponseFactory;
-    use Illuminate\Contracts\Filesystem\Filesystem;
+    use Extras;
     use Illuminate\Routing\Controller;
-    use League\Glide\ServerFactory;
 
     class ImgsController extends Controller
     {
 
-        public function storage(Filesystem $filesystem, $path)
-
+        /**
+         * @param $dir
+         * @param $path
+         * @return mixed
+         */
+        public function storage($dir, $path)
         {
-
-            $server = ServerFactory::create([
-                'response' => new LaravelResponseFactory(app('request')),
-                'source' => $filesystem->getDriver(),
-                'cache' => $filesystem->getDriver(),
-                'source_path_prefix' => '/img',
-                'cache_path_prefix' => '/.cache',
-                'base_url' => '/img/'
-            ]);
-
-            return $server->getImageResponse($path, request()->all());
-
+            return Extras::glide($path, $dir);
         }
 
-        public function img($photo, $params = [])
+        /**
+         * @param $dir
+         * @param $photo
+         * @return mixed
+         * @internal param array $params
+         */
+        public function img($dir, $photo)
         {
-
-            $server = ServerFactory::create([
-                'source' => "img/",
-                'cache' => "img/",
-                'source_path_prefix' => '/',
-                'cache_path_prefix' => '/.cache',
-            ]);
-
-            return $server->outputImage($photo, request()->all());
+            return Extras::glidePublic($dir, $photo);
         }
+
 
     }
+
