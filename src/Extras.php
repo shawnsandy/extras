@@ -71,5 +71,17 @@
             return $server->outputImage($photo, request()->all());
         }
 
+        public function str_limit($string = "", $limit = 20, $trail = "...")
+        {
+
+                if (str_word_count($string, 0) > $limit) {
+                    $words = str_word_count($text, 2);
+                    $pos = array_keys($words);
+                    $text = substr($text, 0, $pos[$limit]) . $trail;
+                }
+                return $text;
+
+        }
+
 
     }
