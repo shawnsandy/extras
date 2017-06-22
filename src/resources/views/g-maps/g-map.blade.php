@@ -11,6 +11,7 @@
 @push("scripts")
 <script  src="/js/extras/g-maps.js"></script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYv1QR6VN_QjF73eoCJqKL57lk9FgTIUk&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key={{ config("extras.settings.keys.google_maps_api_key") }}&callback=initMap">
 </script>
+
 @endpush
