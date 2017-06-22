@@ -77,9 +77,9 @@
                 if (str_word_count($string, 0) > $limit) {
                     $words = str_word_count($string, 2);
                     $pos = array_keys($words);
-                    $text = substr($string, 0, $pos[$limit]) . $trail;
+                    $string = substr($string, 0, $pos[$limit]) . $trail;
                 }
-                return $text;
+                return $string;
 
         }
 
