@@ -63,7 +63,7 @@
         {
             $server = ServerFactory::create([
                 'source' => "$dir/",
-                'cache' => "$dir/",
+                'cache' => "./",
                 'source_path_prefix' => '/',
                 'cache_path_prefix' => '/.cache',
             ]);
