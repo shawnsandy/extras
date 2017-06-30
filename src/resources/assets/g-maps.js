@@ -5,7 +5,7 @@ function initMap() {
     var scroll = el.dataset.scroll ? Number(el.dataset.scroll) : false;
     var uluru = {lat: Number(el.dataset.lat), lng: Number(el.dataset.lng)};
     var map = new google.maps.Map(el, {
-        zoom: mapzoom,
+        zoom: Number(mapzoom),
         center: uluru,
         scrollwheel:  scroll
     });
