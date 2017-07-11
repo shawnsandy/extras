@@ -38,7 +38,7 @@
 
         public function scopeDesc($query, $column = "id")
         {
-            return $query->orderBy($column, "ASC");
+            return $query->orderBy($column, "DESC");
         }
 
 
