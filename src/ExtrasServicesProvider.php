@@ -102,8 +102,6 @@
         public function loadProviders()
         {
 
-
-
             /*
              * load service providers
              */
@@ -117,6 +115,7 @@
             $this->app->register('Laravel\Socialite\SocialiteServiceProvider');
             $this->app->register('Zondicons\ZondiconsServiceProvider');
             $this->app->register('Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider');
+            $this->app->register(\Spatie\CollectionMacros\CollectionMacroServiceProvider::class);
             $this->app->register(\AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class);
 
 

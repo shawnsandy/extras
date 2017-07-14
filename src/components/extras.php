@@ -24,12 +24,12 @@
     });
 
     Html::macro('microTip', function() {
-        $css = "<link rel=\"stylesheet\" href=\"/https://unpkg.com/microtip/microtip.css\">";
+        $css = "<link rel=\"stylesheet\" href=\"https://unpkg.com/microtip/microtip.css\">";
 
         return Extras::toHtmlString($css);
     });
 
-    Html::macro('tooltip', function ($tip="Hey! Tip me", $position = 'up') {
+    Html::macro('tooltip', function ($tip="Hey! Tip me", $position = 'bottom') {
 
         $tip = Extras::toHtmlString("aria-label=\"{$tip}\" data-microtip-position=\"{$position}\" role=\"tooltip\"  data-microtip-size=\"medium\"");
 
