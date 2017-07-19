@@ -21,6 +21,7 @@
             $map_address = urlencode($address);
             $map_url = "https://maps.googleapis.com/maps/api/geocode/json?address={$map_address}&key=AIzaSyArUKdQIBN_lzsFpM7JiMq0DNfD9q0qmVE";
             $map_data = json_decode(file_get_contents($map_url));
+            if(count($map_data)) :
             $map_info = [
                 "lat" => $map_data->results[0]->geometry->location->lat,
                 "lng" => $map_data->results[0]->geometry->location->lng,
@@ -28,6 +29,7 @@
                 "id" => $map_data->results[0]->place_id,
             ];
             return $map_info;
+            endif ;
         }
 
     }
