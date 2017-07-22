@@ -21,7 +21,6 @@
         "barryvdh/laravel-debugbar": "^2.3",
         "barryvdh/laravel-ide-helper": "^2.3",
         "brotzka/laravel-dotenv-editor": "^2.0",
-        "davestewart/sketchpad": "^1.2",
         "doctrine/dbal": "^2.5",
         "greggilbert/recaptcha": "^2.2",
         "illuminate/contracts": "~5.3|~5.4",
