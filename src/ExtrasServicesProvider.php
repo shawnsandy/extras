@@ -106,7 +106,7 @@
              * load service providers
              */
 
-            $this->app->register(\davestewart\sketchpad\SketchpadServiceProvider::class);
+
             $this->app->register(\Collective\Remote\RemoteServiceProvider::class);
             $this->app->register(\Collective\Html\HtmlServiceProvider::class);
             $this->app->register('Mews\Purifier\PurifierServiceProvider');
