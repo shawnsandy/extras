@@ -48,7 +48,7 @@
                 'source' => $filesystem->getDriver(),
                 'cache' => $filesystem->getDriver(),
                 'source_path_prefix' => '/' . $dir,
-                'cache_path_prefix' => '/.cache',
+                'cache_path_prefix' =>
                 'base_url' => '/glide/'
             ]);
 
@@ -63,7 +63,7 @@
         {
             $server = ServerFactory::create([
                 'source' => "$dir/",
-                'cache' => "./",
+                'cache' => '/'.$dir.'/.cache',
                 'source_path_prefix' => '/',
                 'cache_path_prefix' => '/.cache',
             ]);
