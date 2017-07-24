@@ -48,7 +48,7 @@
                 'source' => $filesystem->getDriver(),
                 'cache' => $filesystem->getDriver(),
                 'source_path_prefix' => '/' . $dir,
-                'cache_path_prefix' =>
+                'cache_path_prefix' => '/.cache',
                 'base_url' => '/glide/'
             ]);
 
