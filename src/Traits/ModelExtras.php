@@ -13,34 +13,14 @@
     {
 
         /**
-         * @param $query
-         * @return mixed
-         */
-        public function scopeLatest($query, $limit = 15)
-        {
-            return $query->orderBy("id", "DESC")->take($limit);
-        }
-
-        /**
          * @param     $query
          * @param int $paginate
          * @return mixed
          */
         public function scopeLatestPaginated($query, $paginate = 20)
         {
-            return $query->orderBy("id", "DESC")->paginate($paginate);
+            return $query->latest()->paginate($paginate);
         }
-
-        public function scopeAsc($query, $column = "id")
-        {
-            return $query->orderBy($column, "ASC");
-        }
-
-        public function scopeDesc($query, $column = "id")
-        {
-            return $query->orderBy($column, "DESC");
-        }
-
 
         public function getCreatedSinceAttribute($query)
         {
