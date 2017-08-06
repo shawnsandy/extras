@@ -5,6 +5,7 @@
         </p>
         {{ $slot }}
         <div>
+
         </div>
     </div>
 </aside>
