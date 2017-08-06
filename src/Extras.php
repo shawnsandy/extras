@@ -62,11 +62,11 @@
         public function glidePublic($dir, $photo)
         {
             $server = ServerFactory::create([
-                'source' => "$dir/",
-                'cache' => '/'.$dir.'/.cache',
+                'source' => "./$dir/",
+                'cache' =>  "$dir/",
                 'source_path_prefix' => '/'. $dir,
                 'cache_path_prefix' => '/.cache',
-                'base_url' => '/public/'
+
             ]);
 
             return $server->outputImage($photo, request()->all());

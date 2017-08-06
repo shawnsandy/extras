@@ -9,7 +9,7 @@
     namespace ShawnSandy\Extras\Traits;
 
 
-    trait ModelExtras
+    trait    ModelExtras
     {
 
         /**
