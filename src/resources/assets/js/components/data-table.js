@@ -9,15 +9,15 @@ var table = $(el).DataTable({
 
 $("td.action").addClass("text-right");
 
-$(el + ' tbody').on('click', 'tr', function () {
+$(el + ' tbody tr').mouseover( function () {
 
     data_btn = $(this).find(".data-btn");
 
-    $(".data-btn").prop("disabled", true).hide();
+    //$(".data-btn").prop("disabled", true).hide();
 
     if ($(this).hasClass('selected')) {
         $(this).removeClass('selected');
-        data_btn.show();
+       // data_btn.show();
     } else {
         table.$('tr.selected').removeClass('selected');
         $(this).addClass('selected');
