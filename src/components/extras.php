@@ -15,32 +15,39 @@
 
     Html::macro('entypoStylesheet', function () {
         $css = "<link rel=\"stylesheet\" href=\"/assets/extras/entypo/style.css\">";
+
         return Extras::toHtmlString($css);
     });
 
     Html::macro('entypoFont', function ($name = "circle") {
         $icon = Extras::toHtmlString("<span class=\"entypo entypo-{$name}\"></span>");
+
         return $icon;
     });
 
-    Html::macro('microTip', function() {
+    Html::macro('microTip', function () {
         $css = "<link rel=\"stylesheet\" href=\"https://unpkg.com/microtip/microtip.css\">";
 
         return Extras::toHtmlString($css);
     });
 
-    Html::macro('tooltip', function ($tip="Hey! Tip me", $position = 'bottom') {
+    Html::macro('tooltip', function ($tip = "Hey! Tip me", $position = 'bottom') {
 
         $tip = Extras::toHtmlString("aria-label=\"{$tip}\" data-microtip-position=\"{$position}\" role=\"tooltip\"  data-microtip-size=\"medium\"");
 
         return $tip;
     });
 
+
+    Html::macro("tableRows", function ($table_data) {
+
+      });
+
     Html::component("extrasLogin", "extras::shared.login", []);
 
-    Html::component("choicesJs", "extras::shared.choices",[]);
+    Html::component("choicesJs", "extras::shared.choices", []);
 
-    Html::component("select2Js", "extras::partials.select2js",[]);
+    Html::component("select2Js", "extras::partials.select2js", []);
 
     Html::component(
         "extrasPublic", "extras::components.img", [
