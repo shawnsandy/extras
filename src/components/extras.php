@@ -40,6 +40,13 @@
 
 
     Html::macro("tableRows", function ($table_data) {
+        $data =  collect($table_data)->values()->all();
+        foreach ($data as $value) {
+           return $value;
+        }
+
+
+
 
       });
 
