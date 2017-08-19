@@ -4,20 +4,21 @@
 
 var table = $(el).DataTable({
     data: table_data,
-    "columns": table_columns,
+    "columns": table_columns
 });
 
 $("td.action").addClass("text-right");
 
-$(el + ' tbody').on('click', 'tr', function () {
+$(el + ' tbody tr').mouseover( function () {
 
     data_btn = $(this).find(".data-btn");
 
-    $(".data-btn").prop("disabled", true).hide();
+    $(".data-btn").prop("disabled", true);
+    data_btn.prop("disabled", false);
 
     if ($(this).hasClass('selected')) {
         $(this).removeClass('selected');
-        data_btn.show();
+       // data_btn.show();
     } else {
         table.$('tr.selected').removeClass('selected');
         $(this).addClass('selected');
