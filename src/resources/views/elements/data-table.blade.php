@@ -17,13 +17,13 @@
 
 @endphp
 
-<table id="{{ $table_id or 'data-tables'}}" class="table">
+<table id="{{ $table_id or 'data-tables'}}" class="table table-hover">
     <thead>
     <tr>
         @foreach($columns as $td)
             {!! $td !!}
         @endforeach
-        <td style="max-width: 150px;" class="text-right">
+        <td style="max-width: 150px;" class="text-center">
             <button class="btn btn-default btn-xs"> Actions</button>
         </td>
     </tr>
