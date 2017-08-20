@@ -19,7 +19,7 @@
         @foreach($columns as $td)
             {!! $td !!}
         @endforeach
-        <td style="max-width: 150px;" class="text-center">
+        <td style="max-width: 150px;" class="text-right" data-orderable="false">
             <button class="btn btn-default btn-xs"> Actions</button>
         </td>
     </tr>
@@ -49,6 +49,10 @@
 
 
         var table = $(el).DataTable({
+
+             colReorder: {
+        fixedColumnsLeft: 8
+    }
 
 });
 
