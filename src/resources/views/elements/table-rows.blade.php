@@ -14,7 +14,7 @@ $table_rows = collect($row)->values()->all()
 @endforeach
 
 <td class="text-right">
-<a href="{{ $action_url }}{{ $table_rows[0] }}" class="btn btn-xs btn-default">
+<a href="{{ $action_url }}{{ $table_rows[0] }}/edit" class="btn btn-xs btn-default">
 Manage
 </a>
 </td>
