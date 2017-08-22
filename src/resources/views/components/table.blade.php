@@ -37,7 +37,7 @@
 
 @push("scripts")
     <script type="text/javascript"
-            src="{{ config("extras.datatables", "https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/b-1.3.1/r-2.1.1/datatables.min.js")}} "></script>
+            src="{{ config("extras.datatables", "https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/b-1.3.1/r-2.1.1/datatables.min.js")}} " async></script>
     <script>
 
         var table_data = <?= collect($data) ?>;
@@ -47,5 +47,5 @@
 
     </script>
 
-    <script src="/assets/extras/js/components/data-table.js"></script>
+    <script src="/assets/extras/js/components/data-table.js" async></script>
 @endpush
