@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb6696d6cb91d2d66f7b090e1e04b851",
-    "content-hash": "840947910b0e2f6187affe5487731ebf",
+    "hash": "4d257e062f910dd80e9d9a3098dc1a1b",
+    "content-hash": "54deb5d4a721b1287096cec79f7a4315",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -344,53 +344,6 @@
                 "laravel"
             ],
             "time": "2017-05-07 05:39:47"
-        },
-        {
-            "name": "davestewart/sketchpad",
-            "version": "v1.2.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/davestewart/laravel-sketchpad.git",
-                "reference": "cf5d688d3bcb237f95ea0301da2e04496a4e89a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/davestewart/laravel-sketchpad/zipball/cf5d688d3bcb237f95ea0301da2e04496a4e89a7",
-                "reference": "cf5d688d3bcb237f95ea0301da2e04496a4e89a7",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^5.0",
-                "php": ">=5.3.0",
-                "symfony/filesystem": "^3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "davestewart\\sketchpad\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dave Stewart",
-                    "homepage": "http://davestewart.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "An innovative front-end environment for interactive Laravel development",
-            "homepage": "https://github.com/davestewart/laravel-sketchpad",
-            "keywords": [
-                "Tinker",
-                "laravel",
-                "playground",
-                "testing",
-                "tools"
-            ],
-            "time": "2017-05-30 18:00:04"
         },
         {
             "name": "doctrine/annotations",
@@ -1318,6 +1271,66 @@
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
             "time": "2017-04-19 20:17:43"
+        },
+        {
+            "name": "illuminate/database",
+            "version": "v5.4.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/database.git",
+                "reference": "199393c01cdb87c98aaed9be098b5699415b3bcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/199393c01cdb87c98aaed9be098b5699415b3bcf",
+                "reference": "199393c01cdb87c98aaed9be098b5699415b3bcf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "5.4.*",
+                "illuminate/contracts": "5.4.*",
+                "illuminate/support": "5.4.*",
+                "nesbot/carbon": "~1.20",
+                "php": ">=5.6.4"
+            },
+            "suggest": {
+                "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.5).",
+                "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
+                "illuminate/console": "Required to use the database commands (5.4.*).",
+                "illuminate/events": "Required to use the observers with Eloquent (5.4.*).",
+                "illuminate/filesystem": "Required to use the migrations (5.4.*).",
+                "illuminate/pagination": "Required to paginate the result set (5.4.*)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Database\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Database package.",
+            "homepage": "https://laravel.com",
+            "keywords": [
+                "database",
+                "laravel",
+                "orm",
+                "sql"
+            ],
+            "time": "2017-06-15 19:07:41"
         },
         {
             "name": "illuminate/events",
@@ -2868,6 +2881,71 @@
             "time": "2017-06-05 06:31:10"
         },
         {
+            "name": "plank/laravel-mediable",
+            "version": "2.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plank/laravel-mediable.git",
+                "reference": "75177a1f9f14f1e3d42d2da3e9bda7e2a42c654e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plank/laravel-mediable/zipball/75177a1f9f14f1e3d42d2da3e9bda7e2a42c654e",
+                "reference": "75177a1f9f14f1e3d42d2da3e9bda7e2a42c654e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^5.2.0",
+                "illuminate/filesystem": "^5.2.0",
+                "illuminate/support": "^5.2.0",
+                "league/flysystem": "^1.0.8",
+                "php": ">=5.4.0",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "league/flysystem-aws-s3-v3": "^1.0.8",
+                "orchestra/testbench": "^3.0",
+                "phpunit/phpunit": "^5.7",
+                "satooshi/php-coveralls": "^1.0.1",
+                "vlucas/phpdotenv": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Plank\\Mediable\\MediableServiceProvider"
+                    ],
+                    "aliases": {
+                        "MediaUploader": "Plank\\Mediable\\MediaUploaderFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Plank\\Mediable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sean Fraser",
+                    "email": "sean@plankdesign.com"
+                }
+            ],
+            "description": "A package for easily uploading and attaching media files to models with Laravel",
+            "keywords": [
+                "eloquent",
+                "image",
+                "laravel",
+                "media",
+                "uploader"
+            ],
+            "time": "2017-08-18 17:27:15"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -3321,55 +3399,6 @@
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
             "time": "2017-06-09 14:53:08"
-        },
-        {
-            "name": "symfony/filesystem",
-            "version": "v3.3.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/filesystem.git",
-                "reference": "311fa718389efbd8b627c272b9324a62437018cc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/311fa718389efbd8b627c272b9324a62437018cc",
-                "reference": "311fa718389efbd8b627c272b9324a62437018cc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Filesystem\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Filesystem Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-06-24 09:29:48"
         },
         {
             "name": "symfony/finder",
@@ -3957,6 +3986,53 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "davestewart/sketchpad",
+            "version": "v1.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davestewart/laravel-sketchpad.git",
+                "reference": "cf5d688d3bcb237f95ea0301da2e04496a4e89a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davestewart/laravel-sketchpad/zipball/cf5d688d3bcb237f95ea0301da2e04496a4e89a7",
+                "reference": "cf5d688d3bcb237f95ea0301da2e04496a4e89a7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0",
+                "php": ">=5.3.0",
+                "symfony/filesystem": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "davestewart\\sketchpad\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Stewart",
+                    "homepage": "http://davestewart.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An innovative front-end environment for interactive Laravel development",
+            "homepage": "https://github.com/davestewart/laravel-sketchpad",
+            "keywords": [
+                "Tinker",
+                "laravel",
+                "playground",
+                "testing",
+                "tools"
+            ],
+            "time": "2017-05-30 18:00:04"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
@@ -5352,6 +5428,55 @@
                 "standards"
             ],
             "time": "2017-05-22 02:43:20"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v3.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "311fa718389efbd8b627c272b9324a62437018cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/311fa718389efbd8b627c272b9324a62437018cc",
+                "reference": "311fa718389efbd8b627c272b9324a62437018cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-06-24 09:29:48"
         },
         {
             "name": "symfony/yaml",
