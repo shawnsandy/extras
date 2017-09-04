@@ -4,7 +4,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-### Laravel
+
 
 Extras is small Laravel package that contains some basic components (functions) that are usually required for most apps but are not necessarily included in the base Laravel install.
 
@@ -29,10 +29,20 @@ Via Composer
 
 ```bash
 
+$ composer require shawnsandy/extras dev-master
+
+
+```
+__Laravel 5.4 and below__
+
+```bash
+
 $ composer require shawnsandy/extras
 
 
 ```
+
+
 
 __Required packages__
 
