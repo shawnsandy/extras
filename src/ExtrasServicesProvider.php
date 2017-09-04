@@ -118,20 +118,10 @@ use ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterAuth;
 		* load service providers
 		             */
 
-
-		$this->app->register(\Collective\Remote\RemoteServiceProvider::class);
-		$this->app->register(\Collective\Html\HtmlServiceProvider::class);
 		$this->app->register('Mews\Purifier\PurifierServiceProvider');
 		$this->app->register('Thujohn\Twitter\TwitterServiceProvider');
 		$this->app->register('Brotzka\DotenvEditor\DotenvEditorServiceProvider');
-		$this->app->register('Laravel\Socialite\SocialiteServiceProvider');
 		$this->app->register('Zondicons\ZondiconsServiceProvider');
-		$this->app->register(\Plank\Mediable\MediableServiceProvider::class);
-		$this->app->register('Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider');
-		$this->app->register(\Spatie\CollectionMacros\CollectionMacroServiceProvider::class);
-		$this->app->register(\AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class);
-
-
 
 
 		/*
@@ -139,8 +129,6 @@ use ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterAuth;
 		             */
 
 		if ($this->app->environment() !== "production") {
-
-			$this->app->register('Barryvdh\Debugbar\ServiceProvider');
 
 			$this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
 
@@ -158,14 +146,10 @@ use ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterAuth;
 		             */
 		            $aliases = \Illuminate\Foundation\AliasLoader::getInstance();
 
-		$aliases->alias("Html", \Collective\Html\HtmlFacade::class);
-		$aliases->alias("Form", \Collective\Html\FormFacade::class);
+
 		$aliases->alias('Purifier', 'Mews\Purifier\Facades\Purifier::class');
 		$aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
 		$aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
-		$aliases->alias('Socialite', 'Laravel\Socialite\Facades\Socialite');
-		$aliases->alias('Gmap', \ShawnSandy\Extras\Apps\Maps\MapsFacade::class);
-		$aliases->alias('MediaUploader', \Plank\Mediable\MediaUploaderFacade::class);
 
 
 		/*
@@ -174,7 +158,6 @@ use ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterAuth;
 
 		if ($this->app->environment() !== "production") {
 
-			$aliases->alias('Debugbar', 'Barryvdh\Debugbar\Facade');
 
 		}
 
