@@ -56,7 +56,7 @@ Open `config\app.php` and add the following
 
 * __Providers array__
 
-The Extras service provider auto loads the required providers / Facade for the following package in one go.
+The Laravel discover package feature or the Extras service provider auto loads the required providers / Facade for the following package in one go.
 
 - 'davestewart\sketchpad\SketchpadServiceProvider'
 - 'Collective\Remote\RemoteServiceProvider'
