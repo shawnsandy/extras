@@ -108,8 +108,6 @@ class ExtrasServicesProvider extends ServiceProvider
 
         $this->loadAliases();
 
-        $this->commands();
-
 
     }
 
