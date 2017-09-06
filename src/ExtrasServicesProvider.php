@@ -2,8 +2,8 @@
 
 namespace ShawnSandy\Extras;
 
-use Illuminate\Support\ServiceProvider;
 use ShawnSandy\Extras\Apps\Maps\Maps;
+use Illuminate\Support\ServiceProvider;
 use ShawnSandy\Extras\Apps\Socialize\Socializer;
 use ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterAuth;
 
