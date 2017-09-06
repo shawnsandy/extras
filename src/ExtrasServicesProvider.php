@@ -8,161 +8,193 @@ use ShawnSandy\Extras\Apps\Socialize\Socializer;
 use ShawnSandy\Extras\Apps\Socialize\Twitter\TwitterAuth;
 
 
+
+
 /**
-* Class Provider
+lass Provider
      *
      * @package ShawnSandy\PkgStart
      */
     class ExtrasServicesProvider extends ServiceProvider
     {
 
+
+
 	/**
 	* Perform post-registration booting of services.
-	         *
-	         * @return void
-	         */
-	        public function boot()
-	        {
+			         *
+			         * @return void
+			         */
+			        public function boot()
+			        {
 		// 		if (!$this->app->routesAreCached()) {
 			// 			include __DIR__ . '/routes.php';
 			//
 
 
+
+
+			/**
+			* Package views
+								*/
+						                    $this->loadViewsFrom(__DIR__ . '/resources/views', 'extras');
+
+			$this->publishes(
+								                [
+								                    __DIR__ . '/resources/views' => resource_path('views/vendor/extras'),
+								                ], 'extras-views'
+								            );
+
+
+
+
+			/**
+			* Package assets
+								             */
+								            $this->publishes(
+								                [
+								                    __DIR__ . '/resources/assets/js/' => public_path('assets/extras/js/'),
+								                    __DIR__ . '/public/assets/' => public_path('assets/')
+								                ], 'extras-assets'
+								            );
+
+
+
+
+			/**
+			* Package config
+								             */
+								            $this->publishes(
+								                [__DIR__ . '/config/config.php' => config_path('extras/settings.php')],
+								                'extras-config'
+								            );
+
+			if (!$this->app->runningInConsole()) :
+								                include_once __DIR__ . '/Helpers/helper.php';
+			endif;
+
+			include_once __DIR__ . "/components/extras.php";
+
+
+		}
+
+
+
+
 		/**
-		* Package views
-		*/
-                    $this->loadViewsFrom(__DIR__ . '/resources/views', 'extras');
+		* Register any package services.
+					         *
+					         * @return void
+					         */
+					        public function register()
+					        {
 
-		$this->publishes(
-		                [
-		                    __DIR__ . '/resources/views' => resource_path('views/vendor/extras'),
-		                ], 'extras-views'
-		            );
+			$this->mergeConfigFrom(
+								                __DIR__ . '/config/config.php', 'extras'
+								            );
 
+			$this->app->bind(
+								                'Extras', function () {
+				return new Extras();
+			}
+			);
 
-		/**
-		* Package assets
-		             */
-		            $this->publishes(
-		                [
-		                    __DIR__ . '/resources/assets/js/' => public_path('assets/extras/js/'),
-		                    __DIR__ . '/public/assets/' => public_path('assets/')
-		                ], 'extras-assets'
-		            );
+			$this->app->bind(
+								                'Gmap', function () {
+				return new Maps();
+			}
+			);
 
+			$this->app->bind('Socialize', function () {
+				return new Socializer();
+			}
+			);
 
-		/**
-		* Package config
-		             */
-		            $this->publishes(
-		                [__DIR__ . '/config/config.php' => config_path('extras/settings.php')],
-		                'extras-config'
-		            );
+			$this->app->bind('twitterauth', function () {
+				return new TwitterAuth();
+			}
+			);
 
-		if (!$this->app->runningInConsole()) :
-		                include_once __DIR__ . '/Helpers/helper.php';
-		endif;
+			$this->loadProviders();
 
-		include_once __DIR__ . "/components/extras.php";
+			$this->loadAliases();
 
-
-	}
-
-
-	/**
-	* Register any package services.
-	         *
-	         * @return void
-	         */
-	        public function register()
-	        {
-
-		$this->mergeConfigFrom(
-		                __DIR__ . '/config/config.php', 'extras'
-		            );
-
-		$this->app->bind(
-		                'Extras', function () {
-			return new Extras();
-		}
-		);
-
-		$this->app->bind(
-		                'Gmap', function () {
-			return new Maps();
-		}
-		);
-
-		$this->app->bind('Socialize', function () {
-			return new Socializer();
-		}
-		);
-
-		$this->app->bind('twitterauth', function () {
-			return new TwitterAuth();
-		}
-		);
-
-		$this->loadProviders();
-
-		$this->loadAliases();
-
-
-	}
-
-	public function loadProviders()
-	        {
-
-
-		/*
-		* load service providers
-		             */
-
-		$this->app->register('Mews\Purifier\PurifierServiceProvider');
-		$this->app->register('Thujohn\Twitter\TwitterServiceProvider');
-		$this->app->register('Brotzka\DotenvEditor\DotenvEditorServiceProvider');
-		$this->app->register('Zondicons\ZondiconsServiceProvider');
-
-
-		/*
-		* Dev resources
-		             */
-
-		if ($this->app->environment() !== "production") {
-
-			$this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
 
 		}
 
-
-	}
-
-	public function loadAliases() {
+		public function loadProviders()
+					        {
 
 
 
-		/*
-		* Load aliases / facades
-		             */
-		            $aliases = \Illuminate\Foundation\AliasLoader::getInstance();
+
+			/*
+			* load service providers
+								             */
+
+			$this->app->register('Mews\Purifier\PurifierServiceProvider');
+			$this->app->register('Thujohn\Twitter\TwitterServiceProvider');
+			$this->app->register('Brotzka\DotenvEditor\DotenvEditorServiceProvider');
+			$this->app->register('Zondicons\ZondiconsServiceProvider');
+			if($this->app->version() < 5.5):
+						            //
+			endif;
 
 
-		$aliases->alias('Purifier', 'Mews\Purifier\Facades\Purifier::class');
-		$aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
-		$aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
 
 
-		/*
-		* Dev resources
-		           */
+			/*
+			* Dev resources
+								             */
 
-		if ($this->app->environment() !== "production") {
+			if ($this->app->environment() !== "production") {
+
+				$this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
+
+			}
+
+
+		}
+
+		public function loadAliases() {
+
+
+
+
+
+			/*
+			* Load aliases / facades
+								             */
+								            $aliases = \Illuminate\Foundation\AliasLoader::getInstance();
+
+
+			$aliases->alias('Purifier', 'Mews\Purifier\Facades\Purifier::class');
+			$aliases->alias("Twitter", 'Thujohn\Twitter\Facades\Twitter::class');
+            $aliases->alias('DotenvEditor', 'Brotzka\DotenvEditor\DotenvEditorFacade');
+
+            /** add support for 5.5 **/
+			if(app()->version() < 5.5):
+			$aliases->alias("Html", \Collective\Html\HtmlFacade::class);
+			$aliases->alias("Form", \Collective\Html\FormFacade::class);
+			$aliases->alias('Socialite', 'Laravel\Socialite\Facades\Socialite');
+			$aliases->alias('Gmap', \ShawnSandy\Extras\Apps\Maps\MapsFacade::class);
+			$aliases->alias('MediaUploader', \Plank\Mediable\MediaUploaderFacade::class);
+			endif;
+
+
+
+
+			/*
+			* Dev resources
+								           */
+
+			if ($this->app->environment() !== "production") {
+
+
+			}
 
 
 		}
 
 
 	}
-
-
-}
